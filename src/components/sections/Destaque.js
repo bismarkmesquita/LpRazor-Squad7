@@ -1,5 +1,4 @@
 import React from "react";
-import Virtuos from '../../assets/images/virtuos.png';
 import '../../assets/css/sections/Destaque.css'
 
 const Destaque = () => {
