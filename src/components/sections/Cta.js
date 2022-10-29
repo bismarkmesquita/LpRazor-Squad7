@@ -30,7 +30,6 @@ const Cta = () => {
                                     <li><i class='bx bxs-chevrons-right'></i>Maior velocidade por núcleo</li>
                                     <li><i class='bx bxs-chevrons-right'></i>Armazenagem rápida</li>
                                 </ul>
-                                <a href="#">Conhecer</a>
                             </div>
                             <img src={Virtuos} alt="Computador Virtuos"></img>
                         </div>
