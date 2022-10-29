@@ -1,0 +1,242 @@
+.cta {
+    margin: 3em 0 7em 0;
+    text-align: center;
+}
+
+.cta-titulo {
+    margin-bottom: 5em;
+}
+
+.cta-titulo h2 {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 16px;
+    border-bottom: 3px solid var(--roxo);
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-content-01 {
+    margin-bottom: 2em;
+}
+
+.cta-content-01 h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--preto);
+    line-height: 1.2em;
+}
+
+.cta-content-01 b {
+    color: var(--roxo);
+}
+
+.cta-content-01 p {
+    margin: 2em 0;
+    line-height: 1.2em;
+}
+
+.cta-content-01 a {
+    text-decoration: none;
+    color: var(--branco);
+    padding: 0.7em;
+    background-color: var(--roxo);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.cta-content-01 a:hover {
+    background-color: #5508C0;
+    box-shadow: 7px 7px 30px rgba(85, 8, 192, 0.3);
+}
+
+@media screen and (min-width: 1024px) {
+    .cta {}
+
+    .cta-titulo h2 {
+        font-size: 56px;
+    }
+
+    .cta-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .cta-content-01 {
+        text-align: start;
+        width: 50%;
+    }
+
+    .cta-content-01 h2 {
+        font-size: 40px;
+    }
+
+    .cta-content-01 p {
+        font-size: 24px;
+        margin: 0.5em 0 1.5em 0;
+    }
+
+    .cta-content-01 a {
+        font-size: 24px;
+    }
+}
+
+
+/* Pc Destaque */
+.card {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card .circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--roxo);
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+
+.card:hover .circle::before {
+    background: var(--preto);
+    clip-path: circle(400px at center);
+}
+
+.card img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    left: 72%;
+    height: 400px;
+}
+
+.card .content {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card:hover .content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card .content h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--roxo);
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+.card .content ul {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 8px;
+    color: var(--branco);
+    margin-bottom: 2em;
+
+    padding: 0;
+    list-style: none;
+}
+
+.card .content i {
+    margin-right: 8px;
+}
+
+.card .content a {
+    text-decoration: none;
+    color: var(--roxo);
+    background-color: var(--branco);
+    padding: 0.5em;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.card .content a:hover {
+    color: var(--branco);
+    background-color: var(--roxo);
+}
+
+.content {
+    text-align: start;
+}
+
+@media screen and (max-width: 991px) {
+    .card {
+        width: auto;
+        height: 600px;
+        max-width: 350px;
+        align-items: flex-start;
+        margin: 10px;
+    }
+
+    .card .content {
+        width: 100%;
+        left: 0;
+        padding: 30px;
+
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .card .circle::before {
+        background: var(--preto);
+        clip-path: circle(400px at center);
+    }
+
+    .card img {
+        top: 70%;
+        left: 50%;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .card .content {
+        padding: 30px;
+    }
+}
