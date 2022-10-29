@@ -5,12 +5,13 @@ on:
     branches:
       - main
 
+runs:
+    using: 'node16'
+    main: 'main.js'
+
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    runs:
-    using: 'node16'
-    main: 'main.js'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
