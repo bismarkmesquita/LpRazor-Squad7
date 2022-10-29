@@ -36,6 +36,7 @@ const Oferta = () => {
                         <img src={VirtuosLogo} alt="Virtuos" class="computador-logo"></img>
                         <a href="#">Conhecer</a>
                     </div>
+
                 </div>
             </div>
         </section>

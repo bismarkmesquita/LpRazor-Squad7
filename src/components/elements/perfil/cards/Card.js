@@ -1,7 +1,8 @@
 import React from "react";
-import Ana from '../../../../assets/images/ana.jpg';
 
-const CardAna = () => {
+
+
+const Card = ({foto, nome, função, idade, cidade, estado, tempo, link1, icone1, link2, icone2}) => {
     return (
         <div class="perfil_container">
             <div class="testimonial mySwiper">
@@ -9,19 +10,19 @@ const CardAna = () => {
                     <div class="slide swiper-slide">
                         <div class="card-perfil">
                             <div class="imgBx">
-                                <img src={Ana} alt="Ana Rodrigues"></img>
+                                <img src={foto} alt={nome}></img>
                             </div>
                             <div class="content">
                                 <div class="details">
-                                    <h2>Ana Rodrigues<br></br><span>Presenter</span></h2>
+                                    <h2>{nome}<br></br><span>{função}</span></h2>
                                     <div class="data">
-                                        <h3>18<br></br><span>Anos</span></h3>
-                                        <h3>Santa Maria<br></br><span>RS</span></h3>
-                                        <h3>6 meses<br></br><span>#Futurista</span></h3>
+                                        <h3>{idade}<br></br><span>Anos</span></h3>
+                                        <h3>{cidade}<br></br><span>{estado}</span></h3>
+                                        <h3>{tempo}<br></br><span>#Futurista</span></h3>
                                     </div>
                                     <div class="actionBtn">
-                                        <a href="https://github.com/NahPR"><i class='bx bxl-github'></i></a>
-                                        <a href="https://www.linkedin.com/in/ana-paula-ribas-rodrigues-64b46723a/"><i class='bx bxl-linkedin'></i></a>
+                                        <a href={link1}><i class={icone1}></i></a>
+                                        <a href={link2}><i class={icone2}></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -33,4 +34,4 @@ const CardAna = () => {
     )
 }
 
-export default CardAna;
+export default Card;
